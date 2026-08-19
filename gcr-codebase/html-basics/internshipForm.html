@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Internship Application Form</h1>
+    <br>
+    <br>
+
+    <form action="register" method="post"></form>
+    <label for="fullname"> Full Name:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="enter your name">
+
+    <br>
+    <br>
+    <label for="email" >Email:</label>
+    <input type="email" id="email" name="email" placeholder="enter email" required>
+    <br>
+    <label for="dateOfBirth">Date Of Birth</label>
+    <input type="date" name="dateOfBirth" id="dateOfBirth" required>
+    <br>
+    <br>
+
+    <label for="password">Password: </label>
+    <input type="password" id="password" name="password">
+    <br>
+    <br>
+    <label for="gender">Gender</label>
+    <input type="radio" value="male" name="male" id="male">
+    <label for="male">Male</label>
+    <input type="radio" value="female" name="female" id="female">
+    <label for="female">Female</label>
+    <br>
+    <br>
+
+    <label for="course">Course:</label>
+    <select id="course" name="course">
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+        <option value="Mechanical">Mechanical</option>
+
+    </select>
+    <br>
+    <br>
+    <label for="skills">Skills:</label>
+    <br>
+        <input type="checkbox" id="" name="" value="" required>
+        <label for="java">Java</label>
+        <input type="checkbox" id="" name="" value="">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" id="" name="" value="">
+        <label for="CSS">CSS</label>
+        <input type="checkbox" id="" name="" value="">
+        <label for="React">React</label>
+    <br>
+    <br>
+
+    <label for="Internship Preference">Preference</label>
+    <input type="radio" value="remote" name="" id="">
+    <label for="remote">Remote</label>
+    <input type="radio" value="On site" name="" id="">
+    <label for="On site">On site</label>
+    <br>
+    <br>
+
+    <label for="resume">Upload Resume</label><br>
+    <input type="file" id="resume" name="resume">
+    <br>
+    <label for="cover letter">Cover Letter</label>
+    <br>
+    <br>
+    <textarea id="cover letter" name="" rows="10" columns="500" placeholder="enter your cover letter here"></textarea>
+
+    <br>
+    <br>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+
+</body>
+</html>
