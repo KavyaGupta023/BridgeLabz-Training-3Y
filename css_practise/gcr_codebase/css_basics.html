@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML CSS Practice - 10 Questions</title>
+
+    <style>
+
+        /* ==============================
+           COMMON CSS
+        ============================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            color: #172033;
+        }
+
+        /* Main fixed header */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background-color: #172a46;
+            color: white;
+
+            padding: 20px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7dd3fc;
+        }
+
+        main {
+            padding-top: 85px;
+        }
+
+        .question-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 35px;
+        }
+
+
+        /* =====================================
+           QUESTION 1 - PERSONAL PORTFOLIO
+        ===================================== */
+
+        #q1 {
+            min-height: 90vh;
+            padding: 70px 7%;
+            background-color: #dbeafe;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-hero {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 8%;
+        }
+
+        .bio {
+            width: 50%;
+        }
+
+        .bio h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .profile {
+            width: 28%;
+            max-width: 280px;
+        }
+
+        .profile img {
+            width: 100%;
+            aspect-ratio: 1;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 6px solid #172a46;
+        }
+
+        .portfolio-contact {
+            text-align: center;
+            padding: 25px;
+            background-color: #bfdbfe;
+        }
+
+
+        /* =====================================
+           QUESTION 2 - INFORMATIONAL PAGE
+        ===================================== */
+
+        #q2 {
+            padding: 0;
+        }
+
+        .city-section {
+            min-height: 55vh;
+
+            padding: 75px 10%;
+
+            border-bottom: 5px solid white;
+        }
+
+        .city-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .city-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            max-width: 850px;
+        }
+
+        .city-intro {
+            background-color: #dbeafe;
+        }
+
+        /* Linear gradient */
+        .linear {
+            background: linear-gradient(
+                to right,
+                #667eea,
+                #764ba2
+            );
+
+            color: white;
+        }
+
+        /* Radial gradient */
+        .radial {
+            background: radial-gradient(
+                circle,
+                #ffd166,
+                #ef8354
+            );
+        }
+
+        /* Parallax section 1 */
+        .parallax-one {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("https://picsum.photos/id/1015/1600/900");
+
+            background-size: cover;
+            background-position: center;
+
+            background-attachment: fixed;
+
+            color: white;
+        }
+
+        /* Parallax section 2 */
+        .parallax-two {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)
+                ),
+                url("https://picsum.photos/id/1036/1600/900");
+
+            background-size: cover;
+            background-position: center;
+
+            background-attachment: fixed;
+
+            color: white;
+        }
+
+
+        /* =====================================
+           QUESTION 3 - TEAM MEMBERS
+        ===================================== */
+
+        #q3 {
+            padding: 70px 7%;
+            background-color: #f8fafc;
+        }
+
+        .team {
+            display: flex;
+
+            gap: 30px;
+
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .card {
+            flex: 1;
+
+            max-width: 350px;
+
+            padding: 30px;
+            margin: 10px;
+
+            background-color: white;
+
+            border: 2px solid #cbd5e1;
+            border-radius: 15px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Highlighted card */
+        .team-lead {
+            background-color: #dbeafe;
+
+            border: 3px dashed #2563eb;
+        }
+
+
+        /* =====================================
+           QUESTION 4 - ARTICLE
+        ===================================== */
+
+        #q4 {
+            padding: 70px 7%;
+            background-color: #f8fafc;
+        }
+
+        .article {
+            max-width: 900px;
+
+            margin: auto;
+
+            background-color: white;
+
+            padding: 35px;
+
+            border: 1px solid #ddd;
+        }
+
+        .article-subheading {
+            color: #64748b;
+        }
+
+        .article p {
+            margin: 25px 0;
+
+            line-height: 1.8;
+
+            text-align: justify;
+        }
+
+        /* First letter */
+        .article p::first-letter {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* First line */
+        .article p::first-line {
+            font-weight: bold;
+        }
+
+        /* Highlight */
+        .article mark {
+            background-color: #fde68a;
+            padding: 3px;
+        }
+
+        /* Blockquote */
+        .article blockquote {
+            border-left: 6px solid #2563eb;
+
+            background-color: #dbeafe;
+
+            padding: 20px;
+
+            margin: 30px 0;
+
+            font-style: italic;
+        }
+
+
+        /* =====================================
+           QUESTION 5 - PRICING
+        ===================================== */
+
+        #q5 {
+            padding: 70px 7%;
+            background-color: #e2e8f0;
+        }
+
+        .pricing {
+            display: flex;
+
+            gap: 25px;
+
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .plan {
+            flex: 1;
+
+            max-width: 350px;
+
+            padding: 30px;
+
+            background-color: white;
+
+            border: 2px solid #cbd5e1;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover effect */
+        .plan:hover {
+            transform: scale(1.05);
+
+            background-color: #e0f2fe;
+        }
+
+        /* Popular plan */
+        .popular {
+            border: 4px solid #2563eb;
+        }
+
+        .price {
+            font-size: 2rem;
+
+            font-weight: bold;
+
+            margin: 20px;
+        }
+
+        .plan ul {
+            text-align: left;
+
+            line-height: 2;
+
+            flex: 1;
+        }
+
+        .plan a {
+            display: block;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            padding: 12px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+        }
+
+
+        /* =====================================
+           QUESTION 6 - PHOTO GALLERY
+        ===================================== */
+
+        #q6 {
+            padding: 70px 7%;
+            background-color: #f8fafc;
+        }
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .photo {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+            border: 3px solid white;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo img {
+            width: 100%;
+
+            height: 250px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform 0.4s;
+        }
+
+        .caption {
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 15px;
+
+            background-color:
+                rgba(0, 0, 0, 0.7);
+
+            color: white;
+
+            text-align: center;
+
+            opacity: 0;
+
+            transition:
+                opacity 0.4s;
+        }
+
+        /* Image scale */
+        .photo:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Caption appears */
+        .photo:hover .caption {
+            opacity: 1;
+        }
+
+
+        /* =====================================
+           QUESTION 7 - CONTACT FORM
+        ===================================== */
+
+        #q7 {
+            min-height: 80vh;
+
+            padding: 70px 7%;
+
+            background-color: #dbeafe;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .contact-form {
+            width: 90%;
+
+            max-width: 600px;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form label {
+            display: block;
+
+            margin:
+                15px 0 5px;
+
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border:
+                2px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 2px 5px rgba(0, 0, 0, 0.1);
+
+            font-size: 1rem;
+        }
+
+        /* Focus effect */
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #2563eb;
+
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 140px;
+
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            font-size: 1rem;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================
+           QUESTION 8 - DASHBOARD
+        ===================================== */
+
+        #q8 {
+            padding: 70px 0;
+
+            background-color: #f1f5f9;
+        }
+
+        .dashboard {
+            display: flex;
+
+            min-height: 650px;
+        }
+
+        .sidebar {
+            width: 230px;
+
+            background-color: #243b5a;
+
+            padding: 30px 20px;
+
+            color: white;
+        }
+
+        .sidebar a {
+            display: block;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px;
+
+            margin-bottom: 10px;
+
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover {
+            background-color: #2563eb;
+        }
+
+        .dashboard-content {
+            flex: 1;
+
+            padding: 50px;
+        }
+
+        .dashboard-boxes {
+            display: flex;
+
+            gap: 25px;
+
+            margin-top: 30px;
+        }
+
+        .dashboard-box {
+            flex: 1;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =====================================
+           QUESTION 9 - NEWSPAPER
+        ===================================== */
+
+        #q9 {
+            padding: 70px 5%;
+
+            background-color: #d6d3d1;
+        }
+
+        .newspaper {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            background-color: white;
+        }
+
+        .newspaper h2 {
+            text-align: center;
+
+            font-size: 3rem;
+
+            column-span: all;
+
+            border-bottom: 4px solid #222;
+
+            padding-bottom: 20px;
+        }
+
+        .news-columns {
+            column-count: 3;
+
+            column-gap: 40px;
+
+            text-align: justify;
+
+            line-height: 1.7;
+        }
+
+        .news-columns img {
+            width: 200px;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            float: left;
+
+            margin:
+                0 15px 10px 0;
+
+            border-radius: 8px;
+        }
+
+
+        /* =====================================
+           QUESTION 10 - COMPLETE LAYOUT
+        ===================================== */
+
+        #q10 {
+            padding: 0;
+        }
+
+        .complete-title {
+            padding: 70px 7% 30px;
+
+            text-align: center;
+
+            background-color: #f8fafc;
+        }
+
+        .complete-hero {
+            position: relative;
+
+            height: 80vh;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url("https://picsum.photos/id/1018/1600/900");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .complete-hero h2 {
+            font-size: 4rem;
+
+            outline: 3px solid white;
+
+            padding: 20px;
+        }
+
+        /* Absolute positioning */
+        .badge {
+            position: absolute;
+
+            top: 35px;
+
+            right: 35px;
+
+            background-color:
+                rgba(37, 99, 235, 0.9);
+
+            padding: 10px 20px;
+
+            border-radius: 20px;
+        }
+
+        /* About section */
+        .about-complete {
+            padding: 90px 8%;
+        }
+
+        .about-container {
+            display: flex;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+
+            border-radius: 15px;
+
+            border: 5px solid #2563eb;
+        }
+
+        /* Services */
+        .services {
+            padding: 90px 8%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #ede9fe
+                );
+        }
+
+        .services h2 {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: flex;
+
+            gap: 30px;
+        }
+
+        .service {
+            flex: 1;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border:
+                2px solid #cbd5e1;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+        }
+
+        /* Contact */
+        .complete-contact {
+            padding: 90px 8%;
+        }
+
+        .complete-contact form {
+            max-width: 600px;
+
+            margin: auto;
+        }
+
+        .complete-contact input,
+        .complete-contact textarea {
+            width: 100%;
+
+            padding: 15px;
+
+            margin: 10px 0;
+
+            border:
+                2px solid #ccc;
+
+            border-radius: 8px;
+        }
+
+        .complete-contact textarea {
+            height: 140px;
+        }
+
+        .complete-contact button {
+            padding: 15px 30px;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+            background-color: #0f172a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        /* =====================================
+           RESPONSIVE DESIGN
+        ===================================== */
+
+        @media (max-width: 800px) {
+
+            .main-header {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            main {
+                padding-top: 120px;
+            }
+
+            .portfolio-hero {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .bio {
+                width: 90%;
+            }
+
+            .profile {
+                width: 50%;
+            }
+
+            .team,
+            .pricing,
+            .about-container,
+            .service-container {
+                flex-direction: column;
+            }
+
+            .card,
+            .plan,
+            .service {
+                max-width: none;
+
+                width: 100%;
+            }
+
+            .gallery {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .news-columns {
+                column-count: 2;
+            }
+
+            .dashboard {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .dashboard-boxes {
+                flex-direction: column;
+            }
+
+            .complete-hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .main-header nav a {
+                margin-left: 5px;
+
+                font-size: 0.75rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .news-columns {
+                column-count: 1;
+            }
+
+            .dashboard-content {
+                padding: 30px;
+            }
+
+            .question-title {
+                font-size: 1.8rem;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     FIXED HEADER
+========================================= -->
+
+<header class="main-header">
+
+    <h1>HTML & CSS Practice</h1>
+
+    <nav>
+        <a href="#q1">Q1</a>
+        <a href="#q2">Q2</a>
+        <a href="#q3">Q3</a>
+        <a href="#q4">Q4</a>
+        <a href="#q5">Q5</a>
+        <a href="#q6">Q6</a>
+        <a href="#q7">Q7</a>
+        <a href="#q8">Q8</a>
+        <a href="#q9">Q9</a>
+        <a href="#q10">Q10</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================
+     QUESTION 1
+========================================= -->
+
+<section id="q1">
+
+    <h2 class="question-title">
+        1. Personal Portfolio
+    </h2>
+
+    <div class="portfolio-hero">
+
+        <div class="bio">
+
+            <h2>
+                Hello, I'm Kavya
+            </h2>
+
+            <p>
+                I am a B.Tech student interested in
+                software development, web development
+                and cloud technologies. I enjoy learning
+                new technologies and building useful
+                projects.
+            </p>
+
+        </div>
+
+
+        <div class="profile">
+
+            <img
+                src=""
+                alt="Profile Image">
+
+        </div>
+
+    </div>
+
+
+    <div class="portfolio-contact">
+
+        <h3>Contact</h3>
+
+        <p>
+            Email: kavyagupta967@gmail.com
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 2
+========================================= -->
+
+<section id="q2">
+
+    <h2 class="question-title">
+        2. About a City - Delhi
+    </h2>
+
+
+    <div class="city-section city-intro">
+
+        <h2>History</h2>
+
+        <p>
+            Delhi is one of India's most historically
+            important cities. It has been the center
+            of several empires and contains many
+            famous historical monuments.
+        </p>
+
+    </div>
+
+
+    <div class="city-section linear">
+
+        <h2>Culture</h2>
+
+        <p>
+            Delhi has a diverse culture influenced
+            by people from many parts of India.
+            Festivals, art and traditions make
+            the city vibrant and unique.
+        </p>
+
+    </div>
+
+
+    <div class="city-section radial">
+
+        <h2>Food</h2>
+
+        <p>
+            Delhi is famous for street food such as
+            chaat, parathas, kebabs and many other
+            delicious dishes.
+        </p>
+
+    </div>
+
+
+    <div class="city-section parallax-one">
+
+        <h2>Famous Places</h2>
+
+        <p>
+            India Gate, Red Fort, Qutub Minar and
+            Lotus Temple are some of the most
+            popular attractions.
+        </p>
+
+    </div>
+
+
+    <div class="city-section parallax-two">
+
+        <h2>Tourism</h2>
+
+        <p>
+            Delhi attracts visitors throughout the
+            year because of its history, architecture,
+            food and cultural diversity.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 3
+========================================= -->
+
+<section id="q3">
+
+    <h2 class="question-title">
+        3. Team Members
+    </h2>
+
+
+    <div class="team">
+
+
+        <div class="card team-lead">
+
+            <h2>Kavya</h2>
+
+            <h3>Team Lead</h3>
+
+            <p>
+                Leads the team and coordinates
+                project development and task
+                distribution.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Deepti</h2>
+
+            <h3>Developer</h3>
+
+            <p>
+                Works on application development
+                and implements new features.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Kunj</h2>
+
+            <h3>Designer</h3>
+
+            <p>
+                Designs user interfaces and creates
+                a good user experience.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 4
+========================================= -->
+
+<section id="q4">
+
+    <h2 class="question-title">
+        4. Technology Article
+    </h2>
+
+
+    <article class="article">
+
+        <h1>
+            The Future of Technology
+        </h1>
+
+
+        <div class="article-subheading">
+
+            <h3>
+                By Kavya | August 29, 2026
+            </h3>
+
+        </div>
+
+
+        <p>
+            Technology has become an important part
+            of our everyday lives. From smartphones
+            to cloud computing, technology continues
+            to change how people communicate and work.
+        </p>
+
+
+        <p>
+
+            <mark>
+                Artificial Intelligence
+            </mark>
+
+            is one of the fastest-growing areas of
+            technology. It is being used in education,
+            healthcare, business and many other
+            industries.
+
+        </p>
+
+
+        <p>
+            Cloud computing allows organizations
+            to store and process large amounts of
+            information without maintaining their
+            own physical infrastructure.
+        </p>
+
+
+        <blockquote>
+
+            Technology is best when it brings
+            people together.
+
+        </blockquote>
+
+
+        <p>
+            Web development has changed significantly
+            over the years. Modern websites are
+            responsive, interactive and designed to
+            work across different devices.
+        </p>
+
+
+        <p>
+            Cybersecurity is another important area
+            because organizations need to protect
+            their data from unauthorized access
+            and attacks.
+        </p>
+
+
+        <p>
+            The future will bring even more
+            technological innovation. Students
+            who learn new skills and adapt to
+            changing technologies can prepare
+            themselves for future opportunities.
+        </p>
+
+    </article>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 5
+========================================= -->
+
+<section id="q5">
+
+    <h2 class="question-title">
+        5. Pricing Plans
+    </h2>
+
+
+    <div class="pricing">
+
+
+        <div class="plan">
+
+            <h2>Basic</h2>
+
+            <div class="price">
+                ₹499
+            </div>
+
+            <ul>
+                <li>5 Projects</li>
+                <li>10 GB Storage</li>
+                <li>Email Support</li>
+            </ul>
+
+            <a href="#">
+                Choose Plan
+            </a>
+
+        </div>
+
+
+
+        <div class="plan popular">
+
+            <h2>Standard</h2>
+
+            <div class="price">
+                ₹999
+            </div>
+
+            <ul>
+                <li>20 Projects</li>
+                <li>50 GB Storage</li>
+                <li>Priority Support</li>
+            </ul>
+
+            <a href="#">
+                Choose Plan
+            </a>
+
+        </div>
+
+
+
+        <div class="plan">
+
+            <h2>Premium</h2>
+
+            <div class="price">
+                ₹1499
+            </div>
+
+            <ul>
+                <li>Unlimited Projects</li>
+                <li>100 GB Storage</li>
+                <li>24/7 Support</li>
+            </ul>
+
+            <a href="#">
+                Choose Plan
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 6
+========================================= -->
+
+<section id="q6">
+
+    <h2 class="question-title">
+        6. Photo Gallery
+    </h2>
+
+
+    <div class="gallery">
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/10/800/500"
+                alt="Nature">
+
+            <div class="caption">
+                Nature
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/29/800/500"
+                alt="Mountain">
+
+            <div class="caption">
+                Mountain
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/37/800/500"
+                alt="Beach">
+
+            <div class="caption">
+                Beach
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/42/800/500"
+                alt="City">
+
+            <div class="caption">
+                City
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/47/800/500"
+                alt="Forest">
+
+            <div class="caption">
+                Forest
+            </div>
+
+        </div>
+
+
+        <div class="photo">
+
+            <img
+                src="https://picsum.photos/id/96/800/500"
+                alt="Sunset">
+
+            <div class="caption">
+                Sunset
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 7
+========================================= -->
+
+<section id="q7">
+
+
+    <form class="contact-form">
+
+        <h2>
+            7. Contact Us
+        </h2>
+
+
+        <label for="name">
+            Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name">
+
+
+        <label for="email">
+            Email
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email">
+
+
+        <label for="subject">
+            Subject
+        </label>
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Enter subject">
+
+
+        <label for="message">
+            Message
+        </label>
+
+        <textarea
+            id="message"
+            placeholder="Enter your message">
+        </textarea>
+
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 8
+========================================= -->
+
+<section id="q8">
+
+    <h2 class="question-title">
+        8. Dashboard
+    </h2>
+
+
+    <div class="dashboard">
+
+
+        <aside class="sidebar">
+
+            <h3>
+                Navigation
+            </h3>
+
+            <a href="#">
+                Dashboard
+            </a>
+
+            <a href="#">
+                Profile
+            </a>
+
+            <a href="#">
+                Projects
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </aside>
+
+
+        <main class="dashboard-content">
+
+            <h1>
+                Dashboard
+            </h1>
+
+
+            <div class="dashboard-boxes">
+
+
+                <div class="dashboard-box">
+
+                    <h2>
+                        Projects
+                    </h2>
+
+                    <p>
+                        12 Active Projects
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-box">
+
+                    <h2>
+                        Tasks
+                    </h2>
+
+                    <p>
+                        25 Completed Tasks
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-box">
+
+                    <h2>
+                        Messages
+                    </h2>
+
+                    <p>
+                        8 New Messages
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 9
+========================================= -->
+
+<section id="q9">
+
+    <div class="newspaper">
+
+        <h2>
+            The Daily Chronicle
+        </h2>
+
+
+        <div class="news-columns">
+
+
+            <img
+                src="https://picsum.photos/id/180/500/350"
+                alt="News Image">
+
+
+            <p>
+                Technology has transformed the way
+                people communicate, work and learn.
+                Digital platforms have made information
+                available to millions of people around
+                the world.
+            </p>
+
+
+            <p>
+                Smartphones have become an essential
+                part of modern life. People use them
+                for communication, entertainment,
+                education and business.
+            </p>
+
+
+            <p>
+                Cloud computing has changed the
+                technology industry. Organizations
+                can now access computing resources
+                without maintaining large physical
+                data centers.
+            </p>
+
+
+            <p>
+                Artificial intelligence is another
+                important development. AI systems
+                are being used to automate tasks
+                and analyze large amounts of
+                information.
+            </p>
+
+
+            <p>
+                As technology continues to evolve,
+                people need to develop new skills
+                to adapt to changing career
+                opportunities.
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUESTION 10
+========================================= -->
+
+<section id="q10">
+
+
+    <div class="complete-title">
+
+        <h2>
+            10. Complete Webpage Layout
+        </h2>
+
+    </div>
+
+
+    <!-- Hero -->
+
+    <div class="complete-hero">
+
+
+        <div class="badge">
+            Welcome!
+        </div>
+
+
+        <div>
+
+            <h2>
+                Welcome to My Website
+            </h2>
+
+            <p>
+                Creative. Modern. Responsive.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- About -->
+
+    <section class="about-complete">
+
+        <h2>
+            About Me
+        </h2>
+
+
+        <div class="about-container">
+
+
+            <div class="about-text">
+
+                <h3>
+                    Who Am I?
+                </h3>
+
+                <p>
+                    I am a student interested in
+                    web development, programming
+                    and modern technologies.
+                </p>
+
+                <p>
+                    I enjoy creating responsive
+                    and user-friendly websites.
+                </p>
+
+            </div>
+
+
+            <div class="about-image">
+
+                <img
+                    src="https://picsum.photos/id/201/800/500"
+                    alt="About Image">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+
+    <section class="services">
+
+        <h2>
+            Our Services
+        </h2>
+
+
+        <div class="service-container">
+
+
+            <div class="service">
+
+                <h3>
+                    Web Development
+                </h3>
+
+                <p>
+                    Building responsive websites.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    UI Design
+                </h3>
+
+                <p>
+                    Creating attractive user
+                    interfaces.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>
+                    Cloud Services
+                </h3>
+
+                <p>
+                    Deploying applications on
+                    the cloud.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section class="complete-contact">
+
+        <h2>
+            Contact Me
+        </h2>
+
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Your Name">
+
+
+            <input
+                type="email"
+                placeholder="Your Email">
+
+
+            <textarea
+                placeholder="Your Message">
+            </textarea>
+
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <p>
+        &copy; 2026 HTML & CSS Practice.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
