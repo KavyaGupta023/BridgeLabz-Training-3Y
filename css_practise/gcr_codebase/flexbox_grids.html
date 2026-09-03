@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Assignment - 10 Questions</title>
+
+    <style>
+
+       
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        section {
+            padding: 50px 30px;
+            margin-bottom: 20px;
+        }
+
+        .question-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+
+        #q1 {
+            background-color: white;
+        }
+
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 40px;
+
+            background-color: #222;
+            color: white;
+        }
+
+        .portfolio-nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .portfolio-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .portfolio-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 50px;
+            padding: 50px;
+        }
+
+        .about {
+            flex: 1;
+            text-align: center;
+        }
+
+        .portfolio-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .portfolio-image img {
+            width: 250px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .portfolio-footer {
+            text-align: center;
+            padding: 20px;
+
+            background-color: #222;
+            color: white;
+        }
+
+
+           QUESTION 2 - PRODUCT GRID
+
+        #q2 {
+            background-color: #e8f4ff;
+        }
+
+        .product-gallery {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .product-card {
+            min-height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px #aaa;
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card p {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+
+          /* QUESTION 3 - HOMEPAGE FLEXBOX*/
+
+        #q3 {
+            background-color: #fff4e6;
+        }
+
+        .home-header {
+            display: flex;
+
+            justify-content: space-around;
+            align-items: center;
+
+            padding: 20px;
+
+            background-color: #333;
+            color: white;
+        }
+
+        .home-nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        .home-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .home-main {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+
+            padding: 50px 20px;
+        }
+
+        .home-box {
+            flex: 1;
+
+            padding: 40px;
+
+            text-align: center;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .home-box:hover {
+            transform: rotate(2deg);
+        }
+
+        .home-footer {
+            width: 100%;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background-color: #333;
+            color: white;
+        }
+
+
+        /* 
+           QUESTION 4 - DASHBOARD GRID
+        */
+
+        #q4 {
+            background-color: #eef7ee;
+        }
+
+        .dashboard {
+            min-height: 600px;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-rows: 80px 1fr;
+        }
+
+        .dashboard-header {
+            grid-column: 1 / -1;
+
+            padding: 20px;
+
+            background-color: #222;
+            color: white;
+        }
+
+        .dashboard-sidebar {
+            background-color: #ddd;
+
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .dashboard-sidebar a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .dashboard-main {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+            padding: 30px;
+        }
+
+        .dashboard-box {
+            min-height: 180px;
+
+            padding: 30px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px #aaa;
+
+            transition: 0.3s;
+        }
+
+        .dashboard-box:hover {
+            transform: scale(1.05);
+
+            box-shadow: 0 8px 20px #888;
+        }
+
+        .dashboard-box:first-child {
+            grid-column: span 2;
+        }
+
+
+        /* =====================================================
+           QUESTION 5 - PRICING FLEXBOX
+        ===================================================== */
+
+        #q5 {
+            background-color: #f5efff;
+        }
+
+        .pricing {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .pricing-card {
+            width: 280px;
+
+            min-height: 300px;
+
+            padding: 30px;
+
+            background-color: white;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 15px #ccc;
+
+            animation: fadeIn 1s ease-in;
+
+            transition: 0.3s;
+
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-middle {
+            transform: scale(1.1);
+
+            background-color: #dbeafe;
+        }
+
+        .pricing-middle:hover {
+            transform: scale(1.1) translateY(-10px);
+        }
+
+        .pricing-card h3 {
+            margin: 20px 0;
+            font-size: 25px;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           QUESTION 6 - BLOG GRID
+        ===================================================== */
+
+        #q6 {
+            background-color: #fff;
+        }
+
+        .blog {
+            min-height: 600px;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            gap: 20px;
+        }
+
+        .blog-header {
+            grid-area: header;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px;
+
+            background-color: #222;
+            color: white;
+        }
+
+        .blog-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .blog-nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .blog-sidebar {
+            grid-area: sidebar;
+
+            padding: 20px;
+
+            background-color: #eee;
+        }
+
+        .blog-sidebar p {
+            margin-top: 15px;
+        }
+
+        .blog-main {
+            grid-area: main;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+            padding: 20px;
+        }
+
+        .blog-post {
+            padding: 25px;
+
+            background-color: #f5f5f5;
+
+            border-radius: 10px;
+        }
+
+        .blog-footer {
+            grid-area: footer;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background-color: #222;
+            color: white;
+        }
+
+
+        /* =====================================================
+           QUESTION 7 - LOADING ANIMATION
+        ===================================================== */
+
+        #q7 {
+            background-color: #222;
+
+            min-height: 300px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+
+            border-radius: 50%;
+
+            background-color: white;
+
+            animation-name: bounce;
+
+            animation-duration: 0.8s;
+
+            animation-iteration-count: infinite;
+        }
+
+        .circle1 {
+            animation-delay: 0s;
+        }
+
+        .circle2 {
+            animation-delay: 0.2s;
+        }
+
+        .circle3 {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-25px);
+            }
+
+        }
+
+
+        /* =====================================================
+           QUESTION 8 - PHOTO GALLERY
+        ===================================================== */
+
+        #q8 {
+            background-color: #eaf7ff;
+        }
+
+        .photo-gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .photo-gallery figure {
+            margin: 0;
+
+            overflow: hidden;
+
+            background-color: white;
+
+            border-radius: 10px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 250px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.08);
+        }
+
+        .photo-gallery figcaption {
+            padding: 15px;
+
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           QUESTION 9 - CARD FLIP
+        ===================================================== */
+
+        #q9 {
+            background-color: #fff3e6;
+
+            min-height: 500px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .flip-container {
+            width: 300px;
+            height: 350px;
+
+            perspective: 1000px;
+        }
+
+        .flip-card {
+            width: 100%;
+            height: 100%;
+
+            position: relative;
+
+            transform-style: preserve-3d;
+
+            transition: transform 0.8s;
+        }
+
+        .flip-container:hover .flip-card {
+            transform: rotateY(180deg);
+        }
+
+        .flip-front,
+        .flip-back {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            backface-visibility: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px #aaa;
+
+            text-align: center;
+        }
+
+        .flip-front {
+            background-color: white;
+        }
+
+        .flip-front img {
+            width: 100%;
+            height: 200px;
+
+            object-fit: cover;
+        }
+
+        .flip-back {
+            background-color: #ddd;
+
+            padding: 20px;
+
+            transform: rotateY(180deg);
+        }
+
+
+        /* =====================================================
+           QUESTION 10 - FLEXBOX + GRID
+        ===================================================== */
+
+        #q10 {
+            background-color: #f0f0ff;
+        }
+
+        .responsive-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 20px 50px;
+
+            background-color: #222;
+
+            color: white;
+        }
+
+        .responsive-nav {
+            display: flex;
+
+            gap: 25px;
+        }
+
+        .responsive-nav a {
+            color: white;
+
+            text-decoration: none;
+        }
+
+        .responsive-main {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr;
+
+            gap: 30px;
+
+            padding: 40px;
+        }
+
+        .responsive-article {
+            padding: 20px;
+        }
+
+        .animated-title {
+            margin-bottom: 30px;
+
+            animation: moveUp 1s ease;
+        }
+
+        .three-boxes {
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .responsive-box {
+            flex: 1;
+
+            padding: 30px;
+
+            background-color: white;
+
+            text-align: center;
+
+            border-radius: 10px;
+        }
+
+        .responsive-sidebar {
+            padding: 30px;
+
+            background-color: #ddd;
+
+            border-radius: 10px;
+        }
+
+        .responsive-footer {
+            width: 100%;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background-color: #222;
+
+            color: white;
+        }
+
+        @keyframes moveUp {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+        ===================================================== */
+
+        /* Question 1 */
+
+        @media (max-width: 700px) {
+
+            .portfolio-header,
+            .portfolio-main {
+                flex-direction: column;
+            }
+
+            .portfolio-header {
+                gap: 20px;
+            }
+
+        }
+
+
+        /* Question 2 */
+
+        @media (max-width: 900px) {
+
+            .product-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* Question 3 */
+
+        @media (max-width: 700px) {
+
+            .home-header,
+            .home-main {
+                flex-direction: column;
+            }
+
+            .home-box {
+                width: 100%;
+            }
+
+        }
+
+
+        /* Question 4 */
+
+        @media (max-width: 700px) {
+
+            .dashboard {
+                grid-template-columns: 1fr;
+
+                grid-template-rows: auto;
+            }
+
+            .dashboard-header {
+                grid-column: 1;
+            }
+
+            .dashboard-main {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-box:first-child {
+                grid-column: span 1;
+            }
+
+        }
+
+
+        /* Question 5 */
+
+        @media (max-width: 750px) {
+
+            .pricing {
+                flex-direction: column;
+            }
+
+            .pricing-middle {
+                transform: scale(1);
+            }
+
+            .pricing-middle:hover {
+                transform: translateY(-10px);
+            }
+
+        }
+
+
+        /* Question 6 */
+
+        @media (max-width: 800px) {
+
+            .blog {
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+
+            .blog-main {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-header {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+        }
+
+
+        /* Question 10 */
+
+        @media (max-width: 700px) {
+
+            .responsive-header {
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            .responsive-main {
+                grid-template-columns: 1fr;
+            }
+
+            .three-boxes {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     QUESTION 1
+===================================================== -->
+
+<section id="q1">
+
+    <h1 class="question-title">
+        Question 1 - Personal Portfolio
+    </h1>
+
+    <header class="portfolio-header">
+
+        <h2>Kavya Gupta</h2>
+
+        <nav class="portfolio-nav">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="portfolio-main">
+
+        <section class="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                Hello! I am Kavya, a B.Tech student interested
+                in software development, web development and
+                cloud technologies.
+            </p>
+
+        </section>
+
+
+        <section class="portfolio-image">
+
+            <img
+                src="https://via.placeholder.com/300"
+                alt="Profile Image"
+            >
+
+        </section>
+
+    </main>
+
+
+    <footer class="portfolio-footer">
+
+        <p>
+            © 2026 Kavya Gupta. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 2
+===================================================== -->
+
+<section id="q2">
+
+    <h1 class="question-title">
+        Question 2 - Product Gallery
+    </h1>
+
+
+    <div class="product-gallery">
+
+        <div class="product-card">
+            <h2>Laptop</h2>
+            <p>₹60,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Smartphone</h2>
+            <p>₹30,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Headphones</h2>
+            <p>₹3,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Keyboard</h2>
+            <p>₹2,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Mouse</h2>
+            <p>₹1,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Monitor</h2>
+            <p>₹15,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Smart Watch</h2>
+            <p>₹5,000</p>
+        </div>
+
+        <div class="product-card">
+            <h2>Tablet</h2>
+            <p>₹25,000</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 3
+===================================================== -->
+
+<section id="q3">
+
+    <h1 class="question-title">
+        Question 3 - Homepage
+    </h1>
+
+
+    <header class="home-header">
+
+        <h2>My Website</h2>
+
+        <nav class="home-nav">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="home-main">
+
+        <div class="home-box">
+
+            <h2>Services</h2>
+
+            <p>
+                We provide quality services.
+            </p>
+
+        </div>
+
+
+        <div class="home-box">
+
+            <h2>Projects</h2>
+
+            <p>
+                Check out our latest projects.
+            </p>
+
+        </div>
+
+
+        <div class="home-box">
+
+            <h2>Contact</h2>
+
+            <p>
+                Get in touch with us.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer class="home-footer">
+
+        <p>© 2026 My Website</p>
+
+    </footer>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 4
+===================================================== -->
+
+<section id="q4">
+
+    <h1 class="question-title">
+        Question 4 - Dashboard
+    </h1>
+
+
+    <div class="dashboard">
+
+        <header class="dashboard-header">
+
+            <h2>Dashboard</h2>
+
+        </header>
+
+
+        <aside class="dashboard-sidebar">
+
+            <h3>Menu</h3>
+
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Analytics</a>
+            <a href="#">Settings</a>
+
+        </aside>
+
+
+        <main class="dashboard-main">
+
+            <div class="dashboard-box">
+
+                <h2>Users</h2>
+
+                <p>1,250</p>
+
+            </div>
+
+
+            <div class="dashboard-box">
+
+                <h2>Sales</h2>
+
+                <p>₹50,000</p>
+
+            </div>
+
+
+            <div class="dashboard-box">
+
+                <h2>Orders</h2>
+
+                <p>850</p>
+
+            </div>
+
+
+            <div class="dashboard-box">
+
+                <h2>Visitors</h2>
+
+                <p>5,000</p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 5
+===================================================== -->
+
+<section id="q5">
+
+    <h1 class="question-title">
+        Question 5 - Pricing Plans
+    </h1>
+
+
+    <div class="pricing">
+
+        <div class="pricing-card">
+
+            <h2>Basic</h2>
+
+            <h3>₹499</h3>
+
+            <p>Basic features</p>
+            <p>Email support</p>
+
+        </div>
+
+
+        <div class="pricing-card pricing-middle">
+
+            <h2>Premium</h2>
+
+            <h3>₹999</h3>
+
+            <p>All basic features</p>
+            <p>Priority support</p>
+            <p>Advanced features</p>
+
+        </div>
+
+
+        <div class="pricing-card">
+
+            <h2>Pro</h2>
+
+            <h3>₹1499</h3>
+
+            <p>All premium features</p>
+            <p>24/7 support</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 6
+===================================================== -->
+
+<section id="q6">
+
+    <h1 class="question-title">
+        Question 6 - Blog Layout
+    </h1>
+
+
+    <div class="blog">
+
+        <header class="blog-header">
+
+            <h2>My Tech Blog</h2>
+
+            <nav class="blog-nav">
+
+                <a href="#">Home</a>
+                <a href="#">Blogs</a>
+                <a href="#">About</a>
+
+            </nav>
+
+        </header>
+
+
+        <aside class="blog-sidebar">
+
+            <h2>Categories</h2>
+
+            <p>Web Development</p>
+            <p>Java</p>
+            <p>Cloud Computing</p>
+            <p>Artificial Intelligence</p>
+
+        </aside>
+
+
+        <main class="blog-main">
+
+            <article class="blog-post">
+
+                <h2>Learning HTML & CSS</h2>
+
+                <p>
+                    HTML provides the structure of a webpage
+                    while CSS is used for styling and layout.
+                </p>
+
+            </article>
+
+
+            <article class="blog-post">
+
+                <h2>Why Learn Java?</h2>
+
+                <p>
+                    Java is a popular programming language
+                    used for application and backend development.
+                </p>
+
+            </article>
+
+        </main>
+
+
+        <footer class="blog-footer">
+
+            <p>
+                Contact: example@email.com
+            </p>
+
+        </footer>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 7
+===================================================== -->
+
+<section id="q7">
+
+    <h1 class="question-title" style="color:white;">
+        Question 7 - Loading Animation
+    </h1>
+
+
+    <div class="loader">
+
+        <div class="circle circle1"></div>
+
+        <div class="circle circle2"></div>
+
+        <div class="circle circle3"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 8
+===================================================== -->
+
+<section id="q8">
+
+    <h1 class="question-title">
+        Question 8 - Photo Gallery
+    </h1>
+
+
+    <div class="photo-gallery">
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=1"
+                alt="Nature"
+            >
+
+            <figcaption>
+                Beautiful Nature
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=2"
+                alt="Mountain"
+            >
+
+            <figcaption>
+                Mountain View
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=3"
+                alt="Beach"
+            >
+
+            <figcaption>
+                Beautiful Beach
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=4"
+                alt="Forest"
+            >
+
+            <figcaption>
+                Green Forest
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=5"
+                alt="City"
+            >
+
+            <figcaption>
+                City Life
+            </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+            <img
+                src="https://picsum.photos/400/300?random=6"
+                alt="Sunset"
+            >
+
+            <figcaption>
+                Sunset
+            </figcaption>
+
+        </figure>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 9
+===================================================== -->
+
+<section id="q9">
+
+    <h1 class="question-title">
+        Question 9 - Card Flip Animation
+    </h1>
+
+
+    <div class="flip-container">
+
+        <div class="flip-card">
+
+
+            <div class="flip-front">
+
+                <img
+                    src="https://picsum.photos/300/200"
+                    alt="Technology"
+                >
+
+                <h2>Technology</h2>
+
+            </div>
+
+
+            <div class="flip-back">
+
+                <h2>About Technology</h2>
+
+                <p>
+                    Technology helps us solve problems
+                    and makes everyday tasks easier and faster.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTION 10
+===================================================== -->
+
+<section id="q10">
+
+    <h1 class="question-title">
+        Question 10 - Responsive Website
+    </h1>
+
+
+    <header class="responsive-header">
+
+        <div>
+
+            <h2>MySite</h2>
+
+        </div>
+
+
+        <nav class="responsive-nav">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="responsive-main">
+
+
+        <article class="responsive-article">
+
+            <h2 class="animated-title">
+                Welcome to My Website
+            </h2>
+
+
+            <div class="three-boxes">
+
+
+                <div class="responsive-box">
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Structure of webpages.
+                    </p>
+
+                </div>
+
+
+                <div class="responsive-box">
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Styling and designing webpages.
+                    </p>
+
+                </div>
+
+
+                <div class="responsive-box">
+
+                    <h3>Java</h3>
+
+                    <p>
+                        Programming language for development.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+        <aside class="responsive-sidebar">
+
+            <h2>Sidebar</h2>
+
+            <p>
+                Latest updates and useful links.
+            </p>
+
+        </aside>
+
+
+    </main>
+
+
+    <footer class="responsive-footer">
+
+        <p>
+            © 2026 MySite. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</section>
+
+
+</body>
+
+</html>
