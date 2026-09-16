@@ -1,0 +1,77 @@
+/* Basic page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Horizontal navigation using Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid #777;
+    border-radius: 6px;
+
+    /* Smooth hover transition */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #457b9d;
+    border-color: #457b9d;
+}
+
+/* Active link */
+nav a.active {
+    background-color: #e76f51;
+    border-color: #e76f51;
+}
+
+/* Main content */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive navbar below 700px */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 180px;
+        text-align: center;
+    }
+}
