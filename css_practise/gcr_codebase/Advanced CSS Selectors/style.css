@@ -1,0 +1,92 @@
+/* Attribute selector: selects input elements having type="text" */
+input[type="text"] {
+    border: 3px solid #219ebc;
+}
+
+/* Attribute selector: selects links beginning with https */
+a[href^="https"] {
+    color: #d62828;
+    font-weight: bold;
+}
+
+/* Pseudo-class: changes style when mouse is over an element */
+li:hover {
+    background-color: #caf0f8;
+}
+
+/* Pseudo-class: changes input when it receives focus */
+input:focus {
+    outline: 3px solid #90be6d;
+}
+
+/* Pseudo-class: selects every second list item */
+li:nth-child(2) {
+    font-weight: bold;
+    color: #e76f51;
+}
+
+/* Pseudo-element: adds content before the heading */
+h2::before {
+    content: "★ ";
+}
+
+/* Pseudo-element: adds content after the heading */
+h2::after {
+    content: " ★";
+}
+
+/* Child combinator (>): selects direct children */
+.content > h2 {
+    text-decoration: underline;
+}
+
+/* Adjacent sibling combinator (+) */
+h2 + .items {
+    margin-top: 20px;
+}
+
+/* General sibling combinator (~) */
+h2 ~ .form-section {
+    margin-top: 30px;
+}
+
+/* Descendant combinator: selects paragraphs inside form-section */
+.form-section p {
+    font-size: 18px;
+}
+
+/* General page styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.content {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+li {
+    padding: 12px;
+    margin: 5px;
+}
+
+input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+    border: 1px solid #999;
+}
