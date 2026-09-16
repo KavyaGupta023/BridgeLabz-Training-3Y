@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+}
+
+header {
+    text-align: center;
+    background-color: #264653;
+    color: white;
+    padding: 25px;
+}
+
+/* Center the demonstration */
+.model-section {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Margin layer */
+.margin-layer {
+    display: inline-block;
+    background-color: #f4a261;
+    padding: 30px;
+}
+
+/* Border layer */
+.border-layer {
+    background-color: #e9c46a;
+    border: 15px solid #264653;
+    padding: 25px;
+}
+
+/* Padding layer */
+.padding-layer {
+    background-color: #2a9d8f;
+    padding: 30px;
+}
+
+/* Content layer */
+.content-layer {
+    width: 150px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #222;
+}
+
+/* Description */
+.description {
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Box sizing comparison */
+.comparison {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.default-box,
+.border-box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Default content-box sizing */
+.default-box {
+    box-sizing: content-box;
+    background-color: #ffddd2;
+}
+
+/* border-box includes padding and border in width/height */
+.border-box {
+    box-sizing: border-box;
+    background-color: #cde8e5;
+}
