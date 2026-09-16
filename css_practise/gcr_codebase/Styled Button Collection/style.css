@@ -1,0 +1,82 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+header {
+    background: #0f172a;
+    color: white;
+    padding: 25px;
+}
+
+/* Flexbox button layout */
+.button-container {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px #ccc;
+}
+
+/* Primary button */
+.primary {
+    background: #2563eb;
+    color: white;
+    border: 2px solid #2563eb;
+}
+
+/* Secondary button */
+.secondary {
+    background: #64748b;
+    color: white;
+    border: 2px solid #64748b;
+}
+
+/* Outline button */
+.outline {
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+/* Disabled button */
+.disabled {
+    background: #cbd5e1;
+    color: #64748b;
+    border: 2px solid #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* Hover effect */
+button:not(:disabled):hover {
+    transform: translateY(-3px);
+}
+
+/* Active effect */
+button:not(:disabled):active {
+    transform: scale(0.95);
+}
+
+/* Focus effect */
+button:focus {
+    outline: 3px solid #facc15;
+    outline-offset: 3px;
+}
+```
