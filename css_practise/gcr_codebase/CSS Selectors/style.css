@@ -1,0 +1,48 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>CSS Selectors Practice</h1>
+</header>
+
+<main>
+
+    <p>This paragraph demonstrates an element selector.</p>
+
+    <p class="highlight">This paragraph uses a class selector.</p>
+
+    <p id="special">This paragraph uses an ID selector.</p>
+
+    <a href="https://example.com">Attribute selector example</a>
+
+    <section>
+        <p>Descendant selector example.</p>
+        <div>
+            <p>Another descendant paragraph.</p>
+        </div>
+    </section>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+
+</main>
+
+<footer>
+    <p>CSS Selectors Practice Page</p>
+</footer>
+
+</body>
+</html>
+```
