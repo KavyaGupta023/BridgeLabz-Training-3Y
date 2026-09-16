@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #222;
+}
+
+/* Header typography */
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #343a40;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+/* Article */
+.article {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: white;
+}
+
+/* Heading */
+.article h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Paragraph */
+.article p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+/* First letter pseudo-element */
+.article p:first-of-type::first-letter {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* First line pseudo-element */
+.special::first-line {
+    font-weight: bold;
+}
+
+/* Custom styles for text elements */
+mark {
+    background-color: #ffd166;
+    color: #222;
+    padding: 2px 5px;
+}
+
+strong {
+    color: #d62828;
+}
+
+em {
+    color: #0077b6;
+}
