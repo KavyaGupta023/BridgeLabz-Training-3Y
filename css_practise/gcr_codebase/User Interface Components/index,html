@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Components</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>User Interface Components</h1>
+</header>
+
+<main class="card">
+
+    <h2>Search Products</h2>
+
+    <input type="text" placeholder="Search here...">
+
+    <select>
+        <option>Select Category</option>
+        <option>Technology</option>
+        <option>Books</option>
+        <option>Clothing</option>
+    </select>
+
+    <div class="buttons">
+        <button>Search</button>
+        <button class="reset">Reset</button>
+    </div>
+
+</main>
+
+</body>
+</html>
+```

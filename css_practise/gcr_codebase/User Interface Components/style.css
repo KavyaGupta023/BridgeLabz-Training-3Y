@@ -1,0 +1,80 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Soft background gradient */
+    background: linear-gradient(135deg, #dbeafe, #f5d0fe);
+}
+
+header {
+    text-align: center;
+    background: #1e1b4b;
+    color: white;
+    padding: 25px;
+}
+
+/* Card using Flexbox */
+.card {
+    width: 400px;
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #aaa;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #6366f1;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+.reset {
+    background: #64748b;
+}
+
+.reset:hover {
+    background: #475569;
+}
+```
