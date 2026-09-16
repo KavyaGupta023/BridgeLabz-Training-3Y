@@ -1,0 +1,59 @@
+```css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+header {
+    background: #581c87;
+    color: white;
+    padding: 25px;
+}
+
+/* Flexbox alignment */
+.effects {
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.effect-button {
+    padding: 15px 30px;
+    background: #7e22ce;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 10px #bbb;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class + transformation + transition */
+.effect-button:hover {
+    background: #db2777;
+    transform: scale(1.1);
+    box-shadow: 0 8px 18px #999;
+}
+
+/* Active state */
+.effect-button:active {
+    transform: scale(0.95);
+}
+
+/* Focus state */
+.effect-button:focus {
+    outline: 3px solid #facc15;
+    outline-offset: 4px;
+}
+```
