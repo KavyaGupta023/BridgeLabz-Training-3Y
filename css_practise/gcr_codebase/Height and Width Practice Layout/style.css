@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2f3;
+}
+
+header,
+footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Flexbox centers boxes horizontally and vertically */
+.container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Common box properties */
+.box {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+}
+
+/* Pixel units */
+.box-one {
+    width: 200px;
+    height: 150px;
+    background-color: #e76f51;
+}
+
+/* Percentage and viewport units */
+.box-two {
+    width: 30%;
+    height: 20vh;
+    min-height: 120px;
+    background-color: #2a9d8f;
+}
+
+/* em, max-width and overflow */
+.box-three {
+    width: 15em;
+    max-width: 250px;
+    height: 120px;
+    overflow: auto;
+    background-color: #457b9d;
+}
