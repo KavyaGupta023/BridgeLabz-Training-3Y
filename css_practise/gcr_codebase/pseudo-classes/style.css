@@ -1,0 +1,95 @@
+```css
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #243b55;
+    color: white;
+    padding: 25px;
+}
+
+/* Flexbox layout */
+.examples {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+}
+
+.example {
+    background: white;
+    padding: 25px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+/* :hover example */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dc2626;
+    text-decoration: underline;
+}
+
+/* :active example */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:active {
+    background: #16a34a;
+}
+
+/* :focus example */
+input {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+/* :nth-child() example */
+li {
+    list-style: none;
+    padding: 8px;
+}
+
+li:nth-child(2) {
+    background: #fde68a;
+    color: #92400e;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #243b55;
+    color: white;
+}
+```
