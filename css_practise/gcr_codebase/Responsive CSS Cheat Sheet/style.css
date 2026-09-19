@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+.cheat-sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 40px;
+}
+
+.topic {
+    background-color: white;
+    padding: 25px;
+    border-left: 5px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px #bbb;
+}
+
+.topic h2 {
+    margin-top: 0;
+}
+
+.topic p {
+    line-height: 1.6;
+}
+
+/* Stack topics below 700px */
+@media (max-width: 700px) {
+    .cheat-sheet {
+        grid-template-columns: 1fr;
+    }
+
+    .topic {
+        display: flex;
+        flex-direction: column;
+    }
+}
