@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+.profiles {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.profile-card {
+    width: 300px;
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+
+    /* Page-load animation */
+    animation: fadeIn 1s ease;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: filter 0.5s ease;
+}
+
+.gray {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+/* Hover effects */
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px #999;
+}
+
+.profile-card:hover img {
+    filter: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Stack cards below 800px */
+@media (max-width: 800px) {
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%;
+        max-width: 350px;
+    }
+}
